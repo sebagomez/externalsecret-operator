@@ -46,7 +46,7 @@ APP_PASSWORD="ThisisMyStrongPassword"
 az ad app credential reset --id $APP_ID --password "$APP_PASSWORD"
 
 # Finnaly, the Key Vault must have an Access Policy for the created app
-az keyvault set-policy --name $VAULT_NAME --object-id $SERVICE_PRINCIPAL --secret-permissions get
+az keyvault set-policy --name $VAULT_NAME --object-id $SERVICE_PRINCIPAL --secret-permissions get list
 ```
 
 For a detailed view on how to create the above mentioned resources in the Azure Portal, please go to: [How To Access Azure Key Vault Secrets Through Rest API Using Postman](https://www.c-sharpcorner.com/article/how-to-access-azure-key-vault-secrets-through-rest-api-using-postman/)
